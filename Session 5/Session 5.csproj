@@ -9,13 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ExampleLibrary\**" />
     <Compile Remove="Session 5 App 2\**" />
+    <EmbeddedResource Remove="ExampleLibrary\**" />
     <EmbeddedResource Remove="Session 5 App 2\**" />
+    <None Remove="ExampleLibrary\**" />
     <None Remove="Session 5 App 2\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ExampleLibrary\ExampleLibrary.csproj" />
   </ItemGroup>
 
 </Project>

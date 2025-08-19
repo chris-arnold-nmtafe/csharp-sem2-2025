@@ -55,7 +55,7 @@ int[] temp = new int[intArray.Length + 1];
 Array.Copy(intArray, 0, temp, 0, intArray.Length);
 temp[4] = 5;
 intArray = temp;
-
+//Exercise 2
 string[] names = new string[8] { "Oosman", "Oosman", "Oosman", "Oosman", "Oosman", "Oosman", "Oosman", "Oosman" };
 int[] grades = new int[9] { 100, 100, 100, 100, 100, 100, 100, 100, 100 };
 if (grades.Length != names.Length)
