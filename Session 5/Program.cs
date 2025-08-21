@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using TAFE.Trigonometry;
+using Microsoft.Extensions.Configuration;
 
 Circle circle = new Circle(5, 5, 10);
 Circle circle2 = new Circle(2, 8, 5);
@@ -21,3 +22,13 @@ for (int i = 0; i<selectedNumbers.Length;++i)
 {
     selectedNumbers[i] = i;
 }
+
+// Build a configuration object from command line
+IConfiguration config = new ConfigurationBuilder()
+    .AddCommandLine(args)
+    .Build();
+
+// Read configuration values
+Console.WriteLine($"InputPath: {config["InputPath"]}");
+Console.WriteLine($"OutputPath: {config["OutputPath"]}");
+
