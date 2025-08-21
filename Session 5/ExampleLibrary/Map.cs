@@ -11,6 +11,7 @@ namespace TAFE.Trigonometry
         Circle centre=new Circle(2,3,1.5);
         public Map()
         {
+            //new Square(20);
             //centre.
         }
     }

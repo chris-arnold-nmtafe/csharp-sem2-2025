@@ -1,6 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using TAFE.Trigonometry;
 using Microsoft.Extensions.Configuration;
+
+Square square = new Square(3);
+int area = square.getArea();
+Console.WriteLine($"The square's area is {area}.");
+Console.WriteLine($"Half the square's area is {square.getArea(true)}.");
 
 Circle circle = new Circle(5, 5, 10);
 Circle circle2 = new Circle(2, 8, 5);
