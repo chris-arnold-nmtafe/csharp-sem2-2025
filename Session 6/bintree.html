@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binary Search Tree (1 to 100)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+	  overflow-x: scroll;
+    }
+    svg {
+      border: 1px solid #ccc;
+/*      width: 100%;*/
+      height: auto;
+    }
+    .node circle {
+      fill: #4CAF50;
+      stroke: #2E7D32;
+      stroke-width: 2px;
+    }
+    .node text {
+      fill: white;
+      font-size: 30px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .link {
+      stroke: #999;
+      stroke-width: 1.5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Binary Search Tree (1 to 100)</h2>
+  <svg id="tree" width="50000" height="2000"></svg>
+
+  <script>
+    const svg = document.getElementById('tree');
+    const NODE_RADIUS = 30;
+    const X_SPACING = 40;
+    const Y_SPACING = 70;
+
+    function createBST(start, end) {
+      if (start > end) return null;
+      const mid = Math.floor((start + end) / 2);
+      return {
+        value: mid,
+        left: createBST(start, mid - 1),
+        right: createBST(mid + 1, end),
+      };
+    }
+
+    let positions = {};
+    let maxX = 0;
+
+    function assignPositions(node, depth = 0) {
+      if (!node) return;
+
+      assignPositions(node.left, depth + 1);
+
+      const x = maxX * X_SPACING + 50;
+      const y = depth * Y_SPACING + 50;
+      positions[node.value] = { x, y };
+      maxX++;
+
+      assignPositions(node.right, depth + 1);
+    }
+
+    function drawTree(node) {
+      if (!node) return;
+
+      const { x, y } = positions[node.value];
+
+      if (node.left) {
+        const leftPos = positions[node.left.value];
+        drawLine(x, y, leftPos.x, leftPos.y);
+        drawTree(node.left);
+      }
+      if (node.right) {
+        const rightPos = positions[node.right.value];
+        drawLine(x, y, rightPos.x, rightPos.y);
+        drawTree(node.right);
+      }
+
+      drawNode(x, y, node.value);
+    }
+
+    function drawNode(x, y, value) {
+      const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+      g.setAttribute("class", "node");
+
+      const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      circle.setAttribute("cx", x);
+      circle.setAttribute("cy", y);
+      circle.setAttribute("r", NODE_RADIUS);
+      g.appendChild(circle);
+
+      const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      text.setAttribute("x", x);
+      text.setAttribute("y", y);
+      text.textContent = value;
+      g.appendChild(text);
+
+      svg.appendChild(g);
+    }
+
+    function drawLine(x1, y1, x2, y2) {
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("class", "link");
+      line.setAttribute("x1", x1);
+      line.setAttribute("y1", y1);
+      line.setAttribute("x2", x2);
+      line.setAttribute("y2", y2);
+      svg.appendChild(line);
+    }
+
+    const tree = createBST(1, 1000);
+    assignPositions(tree);
+    drawTree(tree);
+  </script>
+</body>
+</html>
