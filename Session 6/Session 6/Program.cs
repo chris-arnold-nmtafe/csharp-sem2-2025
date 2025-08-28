@@ -5,8 +5,8 @@ int[] array = { 10, 50, 30, 70, 80, 60, 20, 90, 40, 100 };
 //BubbleSort(array);
 Array.Sort(array);
 //Array.ForEach(array,Console.WriteLine);
-int sixtyPosition = BinarySearch(array, 60);
-Console.WriteLine("Sixty is at " + sixtyPosition);
+//int sixtyPosition = BinarySearch(array, 60);
+//Console.WriteLine("Sixty is at " + sixtyPosition);
 int recIndex = RecursiveLinearSearch(array, 30, 0);
 Console.WriteLine("Thirty is at " + recIndex);
 int nfrIndex = RecursiveLinearSearch(array, 25, 0);
@@ -48,23 +48,6 @@ void BubbleSort(int[] array)
             }
         }
     }
-}
-
-int BinarySearch(int[] arrayToSearch, int valueToFind) {
-    int minIndex = 0;
-    int maxIndex = arrayToSearch.Length - 1;
-    while (minIndex <= maxIndex) {
-        int midPoint = (maxIndex + minIndex) / 2;
-        if (arrayToSearch[midPoint] == valueToFind) {
-            return midPoint;
-        }
-        if (valueToFind > arrayToSearch[midPoint]) {
-            minIndex = midPoint + 1;
-        } else {
-            maxIndex = midPoint - 1;
-        }
-    }
-    return -1;
 }
 
 int RecursiveLinearSearch(int[] arrayToSearch, int valueToFind, int index)
