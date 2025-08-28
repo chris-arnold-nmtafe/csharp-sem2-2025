@@ -2,7 +2,8 @@
 Console.WriteLine("Hello, World!");
 
 int[] array = { 10, 50, 30, 70, 80, 60, 20, 90, 40, 100 };
-BubbleSort(array);
+//BubbleSort(array);
+Array.Sort(array);
 //Array.ForEach(array,Console.WriteLine);
 int sixtyPosition = BinarySearch(array, 60);
 Console.WriteLine("Sixty is at " + sixtyPosition);
