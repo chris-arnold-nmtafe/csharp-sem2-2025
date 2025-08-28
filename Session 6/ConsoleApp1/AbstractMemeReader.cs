@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace OOInheritance
 {
+    //Next time: why interfaces?
+    //multiple inheritance: why bad?
     public interface IMemeReader
     {
         public void SaveMemes(List<Meme> memes);
