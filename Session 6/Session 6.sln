@@ -1,10 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35828.75 d17.12
+VisualStudioVersion = 17.13.35828.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Session 6", "Session 6\Session 6.csproj", "{6D37D0BF-C402-48A3-A0AF-0848D83D819D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort and Search", "Sort and Search\Sort and Search.csproj", "{4A48BD77-8CF3-4448-BD8C-6D0B826945D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OO-Inheritance", "ConsoleApp1\OO-Inheritance.csproj", "{FECF0410-B836-4998-925F-128F1CE71455}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +23,10 @@ Global
 		{4A48BD77-8CF3-4448-BD8C-6D0B826945D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A48BD77-8CF3-4448-BD8C-6D0B826945D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A48BD77-8CF3-4448-BD8C-6D0B826945D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FECF0410-B836-4998-925F-128F1CE71455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FECF0410-B836-4998-925F-128F1CE71455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FECF0410-B836-4998-925F-128F1CE71455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FECF0410-B836-4998-925F-128F1CE71455}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
