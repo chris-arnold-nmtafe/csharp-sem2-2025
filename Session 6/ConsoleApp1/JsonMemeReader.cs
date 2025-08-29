@@ -21,3 +21,5 @@ namespace OOInheritance
         }
     }
 }
+
+//HAS-A vs IS-A

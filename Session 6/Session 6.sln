@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort and Search", "Sort and
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OO-Inheritance", "ConsoleApp1\OO-Inheritance.csproj", "{FECF0410-B836-4998-925F-128F1CE71455}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionalBranchExample", "FunctionalBranchExample\FunctionalBranchExample.csproj", "{A0F33963-4104-47A6-8753-AF1738EA50C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDualFunction", "SimpleDualFunction\SimpleDualFunction.csproj", "{D74F151A-D488-450C-82FB-844A1F4CA91D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{FECF0410-B836-4998-925F-128F1CE71455}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FECF0410-B836-4998-925F-128F1CE71455}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FECF0410-B836-4998-925F-128F1CE71455}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0F33963-4104-47A6-8753-AF1738EA50C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F33963-4104-47A6-8753-AF1738EA50C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F33963-4104-47A6-8753-AF1738EA50C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F33963-4104-47A6-8753-AF1738EA50C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74F151A-D488-450C-82FB-844A1F4CA91D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D74F151A-D488-450C-82FB-844A1F4CA91D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D74F151A-D488-450C-82FB-844A1F4CA91D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74F151A-D488-450C-82FB-844A1F4CA91D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
