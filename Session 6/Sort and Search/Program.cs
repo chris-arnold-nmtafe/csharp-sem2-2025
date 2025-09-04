@@ -1,4 +1,27 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
+int LinearSearch(int[] array1, int[] array2)
+{
+    int matches = 0;
+    foreach (int i in array1)
+    {
+
+    }
+}
+int LinearSearch(int[] arrayToSearch,int value)
+{
+    for (int i = 0; i < arrayToSearch.Length; ++i)
+    {
+        if (arrayToSearch[i] == value)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
+
 int[] numbers = { 1, 5, 3, 7, 8, 6, 2, 9, 4 };
 string[] strings = new string[2];
 bool[] bools = new bool[2];
