@@ -5,12 +5,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>OOInheritance</AssemblyName>
-    <RootNamespace>OOInheritance</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <ProjectReference Include="..\GeometryLib\GeometryLib.csproj" />
   </ItemGroup>
 
 </Project>

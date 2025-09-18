@@ -14,10 +14,10 @@ namespace OOInheritance.Geometry
         //{
         //    //do things. make methods to display this thing on screen
         //}
-        public string GetLabelText();
-        //{
-        //    return "This is a thing! On screen!";
-        //}
+        public string GetLabelText()
+        {
+            return "This is a thing! On screen!";
+        }
     }
     public interface ILikeable
     {

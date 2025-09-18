@@ -6,13 +6,6 @@ using System.Threading.Tasks;
 
 namespace OOInheritance
 {
-    //Next time: why interfaces?
-    //multiple inheritance: why bad?
-    public interface IMemeReader
-    {
-        public void SaveMemes(List<Meme> memes);
-        public List<Meme> LoadMemes();
-    }
     public abstract class AbstractMemeFileReader : IMemeReader
     {
         public string FilePath { get; private set; }
