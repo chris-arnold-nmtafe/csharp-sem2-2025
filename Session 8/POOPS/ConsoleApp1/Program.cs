@@ -11,7 +11,7 @@ namespace Programme
             Rectangle getRekt = new Rectangle(-1,-1,8,5);
             Rectangle recCentre = new Rectangle(9,3);
             Square squeere = new Square(8);
-            Rectangle square
+            Rectangle square = squeere;
 
             Console.WriteLine(rect.CalculateArea());
             Console.WriteLine(getRekt.CalculateArea());
