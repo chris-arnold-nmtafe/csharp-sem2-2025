@@ -2,7 +2,11 @@
 
 namespace Geometry {
     public class Rectangle {
-        private string name = "Rufus";
+        private string nameOfRectangle = "Rufus";
+        public string NameOfRectangle {
+            get {  return nameOfRectangle; }
+            set { nameOfRectangle = value; }
+        }
         public int X { get; private set; }
         public int Y { get; private set; }
         public int Width { get; private set; }
