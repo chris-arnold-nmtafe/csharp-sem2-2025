@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="session9.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="OK, here's an app!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label x:Name="nameLabel" Text="Let's enter some data:" FontSize="Title" Padding="30,10,30,10"/>
+        <Entry x:Name="sampleInput" Placeholder="Some kind of input" Completed="textEntered" />
+        <Label Text="And the slider example:" FontSize="16" Padding="30,0,30,0"/>
+        <Slider x:Name="tinyBurger" Maximum="40" ValueChanged="tinyBurger_ValueChanged" />
+        <Label x:Name="burgerText" FontSize="16" Padding="30,24,30,0">
+        </Label>
+    </StackLayout>
+
+</ContentPage>
+
