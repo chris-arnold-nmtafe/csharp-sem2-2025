@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="UIExercise.StudentPalette"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIExercise"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="220">
+    <Grid>
+        <Label Content="Given Name" HorizontalAlignment="Left" Margin="7,7,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.786,-0.62"/>
+        <TextBox x:Name="givenName" HorizontalAlignment="Left" Margin="86,11,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Family Name" HorizontalAlignment="Left" Margin="7,37,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.786,-0.62"/>
+        <TextBox x:Name="familyName" HorizontalAlignment="Left" Margin="86,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="comboEnrolment" HorizontalAlignment="Left" Margin="18,68,0,0" VerticalAlignment="Top" Width="188" Height="24" SelectionChanged="comboEnrolment_SelectionChanged"/>
+    </Grid>
+</UserControl>

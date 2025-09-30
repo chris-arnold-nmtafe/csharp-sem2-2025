@@ -7,13 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="listStudents" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="267" SelectionChanged="listStudents_SelectionChanged"/>
+        <ListBox x:Name="listStudents" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="267" SelectionChanged="listStudents_SelectionChanged" MouseDoubleClick="listStudents_MouseDoubleClick">
+        </ListBox>
         <Button x:Name="buttonGetStudents" Click="buttonGetStudents_Click" Content="Get Students" HorizontalAlignment="Left" Margin="654,10,0,0" VerticalAlignment="Top" Width="128" Height="58" FontSize="20"/>
-        <Button x:Name="buttonAddStudent" Click="addStudent_Click" Content="Add Student" HorizontalAlignment="Left" Margin="654,110,0,0" VerticalAlignment="Top" Width="128" Height="58" FontSize="20"/>
-        <Button x:Name="buttonEditStudent" Click="editStudent_Click" Content="Save" HorizontalAlignment="Left" Margin="654,210,0,0" VerticalAlignment="Top" Width="128" Height="58" FontSize="20"/>
-        <TextBox x:Name="textBoxFirstName" HorizontalAlignment="Left" Height="23" Margin="337,62,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBoxLastName" HorizontalAlignment="Left" Height="23" Margin="462,62,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Width="120"/>
-        <ComboBox x:Name="comboEnrolment" HorizontalAlignment="Left" Margin="337,105,0,0" VerticalAlignment="Top" Width="245" Height="32" SelectionChanged="comboEnrolment_SelectionChanged"/>
+        <Button x:Name="buttonAddStudent" Click="buttonAddStudent_Click" Content="Add Student" HorizontalAlignment="Left" Margin="654,100,0,0" VerticalAlignment="Top" Width="128" Height="58" FontSize="20"/>
+        <Button x:Name="buttonSaveStudent" Click="buttonSaveStudent_Click" Content="Edit Student" HorizontalAlignment="Left" Margin="654,190,0,0" VerticalAlignment="Top" Width="128" Height="58" FontSize="20"/>
+        <local:StudentPalette x:Name="palette" HorizontalAlignment="Left" Margin="352,43,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

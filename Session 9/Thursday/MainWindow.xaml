@@ -5,14 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Thursday"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="400">
+        Title="MainWindow" Height="400" Width="700">
     <Grid>
-        <Button Content="Die Slow" HorizontalAlignment="Left" Margin="47,112,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Condensed" Click="Button_Click"/>
-        <TextBox xaml:Name="nameBox" HorizontalAlignment="Left" Margin="103,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" FontFamily="Bahnschrift Condensed" FontSize="50" MouseEnter="annoy"/>
-        <Label xaml:Name="nameLabel" Content="Name" HorizontalAlignment="Left" Margin="49,32,0,0" VerticalAlignment="Top"/>
+        <Button Content="Die Slow" HorizontalAlignment="Left" Margin="47,112,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Condensed" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <TextBox xaml:Name="nameBox" HorizontalAlignment="Left" Margin="103,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="277" FontFamily="Bahnschrift Condensed" FontSize="50" MouseEnter="annoy" Grid.ColumnSpan="2"/>
+        <Label xaml:Name="nameLabel" Content="Name" HorizontalAlignment="Left" Margin="49,32,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <DataGrid xaml:Name="exGrid" Grid.ColumnSpan="2" Margin="131,112,10,10"/>
 
-        <Slider HorizontalAlignment="Left" Margin="242,112,0,0" VerticalAlignment="Top" Width="120" Maximum="100" Minimum="-100" Value="3" LargeChange="0.1" IsDirectionReversed="True" SmallChange="0.01" ValueChanged="updateBox" MouseEnter="annoy" />
-        <Slider HorizontalAlignment="Left" Margin="95,133,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

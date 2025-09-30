@@ -1,7 +1,15 @@
-﻿namespace UIExercise
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UIExercise
 {
-    class Student
+    public class Student
     {
+        public const int STATUS_ENROLLED = 0;
+        public const int STATUS_WITHDRAWN = 1;
 
         public int ID { get; set; }
         public string FirstName { get; set; }
@@ -10,6 +18,7 @@
 
         public Student()
         {
+
         }
 
         public Student(int id, string firstName, string lastName, EnrolmentStatus status)
@@ -21,9 +30,10 @@
         }
 
 
-        public void EnrolStudent()
+        public void ErrolStudent()
         {
-            Enrolment = EnrolmentStatus.Enrolled;
+            //Enrolment = EnrolmentStatus.Enrolled;
+            FirstName = "Errol";
         }
 
         public void Withdraw()
@@ -38,12 +48,12 @@
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{FirstName} {LastName} ({Enrolment})";
+            return $"{LastName} {FirstName} ({Enrolment})";
         }
 
     }
 
-    enum EnrolmentStatus
+    public enum EnrolmentStatus
     {
         NotEnrolled = 0,
         Pending = 1,

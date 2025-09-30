@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UIExercise
 {
-    class DataService 
+    class DataService
     {
        private List<Student> students = new List<Student>();
 

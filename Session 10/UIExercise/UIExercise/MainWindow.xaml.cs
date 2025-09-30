@@ -1,8 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace UIExercise
 {
@@ -16,7 +25,7 @@ namespace UIExercise
         public MainWindow()
         {
             InitializeComponent();
-            comboEnrolment.ItemsSource = Enum.GetValues(typeof(EnrolmentStatus));
+//            comboEnrolment.ItemsSource = Enum.GetValues(typeof(EnrolmentStatus));
         }
 
         /// <summary>
@@ -27,54 +36,47 @@ namespace UIExercise
         /// <param name="e"></param>
         private void buttonGetStudents_Click(object sender, RoutedEventArgs e)
         {
-            listStudents.ItemsSource = service.GetStudents();
+            List<Student> students = service.GetStudents();
+            listStudents.ItemsSource = students;
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender">The UI control that triggers the change</param>
-        /// <param name="e"></param>
-        private void listStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Student selected = (Student)listStudents.SelectedItem;
-            textBoxFirstName.Text = selected.FirstName;
-            textBoxLastName.Text = selected.LastName;
-            comboEnrolment.SelectedValue = selected.Enrolment;
-        }
-
-        /// <summary>
-        /// This event triggers when the combo box selection is changed.
-        /// TODO: It should update the selected students enrolment.
+        /// This event is triggered when the user selects a student from the list.
+        /// TODO: Update the controls to show the properties of the selected student.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void comboEnrolment_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void listStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Student selected = (Student)listStudents.SelectedItem;
-            if (selected != null) {
-                selected.Enrolment = (EnrolmentStatus)comboEnrolment.SelectedValue;
-            }
+            object selected = listStudents.SelectedItem;
+            Student student = (Student)selected;
+            palette.Student = student;
+        }
+
+        private void buttonAddStudent_Click(object sender, RoutedEventArgs e) {
+            StudentEditor editor = new StudentEditor();
+            editor.StudentChanged += studentAdded;
+            editor.Show();
+        }
+
+        private void studentAdded(object sender,EventArgs e) {
+            StudentEditor popup = (StudentEditor)sender;
+            service.AddStudent(popup.Student);
             listStudents.Items.Refresh();
         }
 
-        private void editStudent_Click(object sender, RoutedEventArgs e) {
-            Student selected = (Student)listStudents.SelectedItem;
-            if (selected != null) {
-                selected.FirstName = textBoxFirstName.Text;
-                selected.LastName = textBoxLastName.Text;
-                selected.Enrolment = (EnrolmentStatus)comboEnrolment.SelectedValue;
-            }
-            listStudents.Items.Refresh();
+        private void buttonSaveStudent_Click(object sender, RoutedEventArgs e) {
+            listStudents_MouseDoubleClick(sender, null);
         }
 
-        private void addStudent_Click(object sender, RoutedEventArgs e) {
-            Student newStudent = new Student() {
-                FirstName = textBoxFirstName.Text,
-                LastName = textBoxLastName.Text,
-                Enrolment = (EnrolmentStatus)comboEnrolment.SelectedValue
-            };
-            service.AddStudent(newStudent);
+        private void listStudents_MouseDoubleClick(object sender, MouseButtonEventArgs e) {
+            object selected = listStudents.SelectedItem;
+            Student student = selected as Student;
+            StudentEditor editor = new StudentEditor(student);
+            editor.StudentChanged += studentSaved;
+            editor.Show();
+        }
+        private void studentSaved(object sender, EventArgs e) {
             listStudents.Items.Refresh();
         }
     }
