@@ -20,8 +20,11 @@ namespace OOInheritance
         }
         public List<Meme> LoadMemes()
         {
-            string encodedMemes = File.ReadAllText(FilePath);
-            return DecodeMemes(encodedMemes);
+            if (File.Exists(FilePath)) {
+                string encodedMemes = File.ReadAllText(FilePath);
+                return DecodeMemes(encodedMemes);
+            }
+            return new List<Meme>();
         }
         public abstract string EncodeMemes(List<Meme> memes);
         public abstract List<Meme> DecodeMemes(string encodedMemes);
