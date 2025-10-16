@@ -11,7 +11,7 @@ namespace DogTest {
             Thread.Sleep(2000);
             Assert.IsTrue(dog.IsHungry);
         }
-
+        // chris.arnold@nmtafe.wa.edu.au
         [TestMethod]
         public void TestSnakeDigestion() {
             Snake gerald = new Snake();
