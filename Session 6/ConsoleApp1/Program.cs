@@ -8,6 +8,7 @@ namespace OOInheritance
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             string storageType=ConfigurationManager.AppSettings["storage type"];
             string storageConfig = ConfigurationManager.AppSettings["storage configuration"];
             IMemeReader storage = MemeStorageFactory.CreateMemeReader(storageType, storageConfig);
@@ -20,6 +21,9 @@ namespace OOInheritance
             storage2.SaveMemes(allData);
             //            DoMemeThing(storage);
             Console.Read();
+=======
+            DoMemeThing();
+>>>>>>> fededfe97234d860d351371b6535af6d3f1e0dc5
         }
         public static void DoCircleThing()
         {
@@ -39,7 +43,11 @@ namespace OOInheritance
         {
             thing.drawToScreen(screen);
         }
+<<<<<<< HEAD
         public static void DoMemeThing(IMemeReader storage) {
+=======
+        public static void DoMemeThing() {
+>>>>>>> fededfe97234d860d351371b6535af6d3f1e0dc5
             //Meme meme1 = new Meme(0,"Chuck Norris","Chuck Norris caught all the Pokemons. On a landline.");
             //Meme meme2 = new Meme(1, "WDA", "Web Development Acronyms");
             //Meme meme3 = new Meme(2, "Correct Horse Battery Staple", "XKCD cartoon on password strength");
@@ -48,20 +56,36 @@ namespace OOInheritance
             //IMemeReader csvMemeReader = new JsonMemeReader("memes.json"); //new CsvMemeReader("memes.csv");
             //List<Meme> memes = new List<Meme>() { meme1, meme2, meme3, meme4 };
             //csvMemeReader.SaveMemes(memes);
+<<<<<<< HEAD
             
             List<Meme> reconstitutedMemes = storage.LoadMemes();
             foreach (Meme meme in reconstitutedMemes) {
                 Console.WriteLine(meme);
             }
+=======
+>>>>>>> fededfe97234d860d351371b6535af6d3f1e0dc5
 
-
-            //Transcoding example:
-            //IMemeReader csvMemeReader = new CsvMemeReader("memes.csv");
             //List<Meme> reconstitutedMemes = csvMemeReader.LoadMemes();
             //Console.WriteLine(reconstitutedMemes.Count);
 
-            //IMemeReader jsonMemeWriter = new JsonMemeReader("memes2.json");
-            //jsonMemeWriter.SaveMemes(reconstitutedMemes);
+
+            //Transcoding example:
+            //IMemeReader jsonMemeWriter = new JsonMemeReader("memes.json");
+            //List<Meme> reconstitutedMemes = jsonMemeWriter.LoadMemes();
+            //Console.WriteLine(reconstitutedMemes.Count);
+
+            //IMemeReader csvMemeReader = new CsvMemeReader("memes.csv");
+            //csvMemeReader.SaveMemes(reconstitutedMemes);
+
+            //Configuration example:
+            string type=ConfigurationManager.AppSettings["type"];
+            string src = ConfigurationManager.AppSettings["source"];
+
+            IMemeReader reader=MemeStorageFactory.CreateMemeReader(type, src);
+            List<Meme> data = reader.LoadMemes();
+            foreach (Meme m in data) {
+                Console.WriteLine(m);
+            }
         }
     }
 }
