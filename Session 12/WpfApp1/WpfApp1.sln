@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1.csproj", "{ECF5D530-A35A-4B58-BCBA-E4A75D8ADBA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogTest", "..\DogTest\DogTest.csproj", "{F2B0771B-D6D3-48DC-96F4-BDB11C7687C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECF5D530-A35A-4B58-BCBA-E4A75D8ADBA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECF5D530-A35A-4B58-BCBA-E4A75D8ADBA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECF5D530-A35A-4B58-BCBA-E4A75D8ADBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECF5D530-A35A-4B58-BCBA-E4A75D8ADBA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B0771B-D6D3-48DC-96F4-BDB11C7687C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B0771B-D6D3-48DC-96F4-BDB11C7687C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B0771B-D6D3-48DC-96F4-BDB11C7687C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B0771B-D6D3-48DC-96F4-BDB11C7687C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF4AEDD7-8816-492E-8073-4FBF135FB1B9}
+	EndGlobalSection
+EndGlobal

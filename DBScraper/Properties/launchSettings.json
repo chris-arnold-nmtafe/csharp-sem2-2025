@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DBScraper": {
+      "commandName": "Project",
+      "commandLineArgs": "server=localhost;database=ca_ictprg431;password=;user=root"
+    }
+  }
+}

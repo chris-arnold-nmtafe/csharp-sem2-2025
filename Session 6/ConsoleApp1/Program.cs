@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Configuration;
+using System.Security.Cryptography.X509Certificates;
 using OOInheritance.Geometry;
 
 namespace OOInheritance
@@ -7,7 +8,18 @@ namespace OOInheritance
     {
         static void Main(string[] args)
         {
-            DoCircleThing();
+            string storageType=ConfigurationManager.AppSettings["storage type"];
+            string storageConfig = ConfigurationManager.AppSettings["storage configuration"];
+            IMemeReader storage = MemeStorageFactory.CreateMemeReader(storageType, storageConfig);
+
+            string storageType2 = ConfigurationManager.AppSettings["target storage type"];
+            string storageConfig2 = ConfigurationManager.AppSettings["target storage configuration"];
+            IMemeReader storage2 = MemeStorageFactory.CreateMemeReader(storageType2, storageConfig2);
+
+            List<Meme> allData = storage.LoadMemes();
+            storage2.SaveMemes(allData);
+            //            DoMemeThing(storage);
+            Console.Read();
         }
         public static void DoCircleThing()
         {
@@ -27,18 +39,20 @@ namespace OOInheritance
         {
             thing.drawToScreen(screen);
         }
-        public static void DoMemeThing() {
-            Meme meme1 = new Meme(0,"Chuck Norris","Chuck Norris caught all the Pokemons. On a landline.");
-            Meme meme2 = new Meme(1, "WDA", "Web Development Acronyms");
-            Meme meme3 = new Meme(2, "Correct Horse Battery Staple", "XKCD cartoon on password strength");
-            Meme meme4 = new Meme(3, "Double Spiderman", "I am a dog mum so.....");
+        public static void DoMemeThing(IMemeReader storage) {
+            //Meme meme1 = new Meme(0,"Chuck Norris","Chuck Norris caught all the Pokemons. On a landline.");
+            //Meme meme2 = new Meme(1, "WDA", "Web Development Acronyms");
+            //Meme meme3 = new Meme(2, "Correct Horse Battery Staple", "XKCD cartoon on password strength");
+            //Meme meme4 = new Meme(3, "Double Spiderman", "I am a dog mum so.....");
 
-            IMemeReader csvMemeReader = new JsonMemeReader("memes.json"); //new CsvMemeReader("memes.csv");
-            List<Meme> memes = new List<Meme>() { meme1, meme2, meme3, meme4 };
-            csvMemeReader.SaveMemes(memes);
+            //IMemeReader csvMemeReader = new JsonMemeReader("memes.json"); //new CsvMemeReader("memes.csv");
+            //List<Meme> memes = new List<Meme>() { meme1, meme2, meme3, meme4 };
+            //csvMemeReader.SaveMemes(memes);
             
-            List<Meme> reconstitutedMemes = csvMemeReader.LoadMemes();
-            Console.WriteLine(reconstitutedMemes.Count);
+            List<Meme> reconstitutedMemes = storage.LoadMemes();
+            foreach (Meme meme in reconstitutedMemes) {
+                Console.WriteLine(meme);
+            }
 
 
             //Transcoding example:
