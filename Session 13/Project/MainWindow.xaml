@@ -7,9 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="477*"/>
+            <ColumnDefinition Width="323*"/>
+        </Grid.ColumnDefinitions>
         <Button Content="New Job" HorizontalAlignment="Left" Margin="68,60,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <ListBox x:Name="jobList" Margin="185,10,0,0"/>
+        <ListBox x:Name="jobList" Margin="156,10,0,0" Grid.Column="1"/>
         <Button Content="Edit Job" HorizontalAlignment="Left" Margin="68,85,0,0" VerticalAlignment="Top" Click="Button2_Click"/>
+        <ComboBox x:Name="jobBox" HorizontalAlignment="Left" Margin="217,160,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="selectedJob"/>
+        <Label x:Name="infoLabel" Content="Nothing!!" HorizontalAlignment="Left" Margin="217,198,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="numberBox" HorizontalAlignment="Left" Margin="33,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="59,198,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
