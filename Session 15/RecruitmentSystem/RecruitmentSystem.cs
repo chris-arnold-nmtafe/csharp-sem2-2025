@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 using Newtonsoft.Json;
 
 namespace WpfApp1 {
@@ -21,7 +20,6 @@ namespace WpfApp1 {
     }
     public class MediaItem {
         public string ID { get; set; }
-        public Image Picture { get; set; }
 }
     public class RecruitmentSystem {
         private readonly List<Job> jobs = new List<Job>();

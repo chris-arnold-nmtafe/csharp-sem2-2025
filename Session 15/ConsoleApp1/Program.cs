@@ -17,6 +17,3 @@ class Person
     }
 
 }
-
-Person p = new Person();
-p.Introduction("Steve");
