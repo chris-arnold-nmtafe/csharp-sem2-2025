@@ -1,0 +1,19 @@
+﻿<Window x:Class="Session_18.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Session_18"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <ListBox x:Name="thinglist" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="22,10,420,217"/>
+        <TextBox x:Name="idbox" HorizontalAlignment="Left" Margin="225,56,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="namebox" HorizontalAlignment="Left" Margin="225,32,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="datebox" HorizontalAlignment="Left" Margin="225,84,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="bor8" Content="Boy or 8 ball" HorizontalAlignment="Left" Margin="225,127,0,0" VerticalAlignment="Top"/>
+        <Button Content="New" HorizontalAlignment="Left" Margin="242,175,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Datelete" HorizontalAlignment="Left" Margin="278,170,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
