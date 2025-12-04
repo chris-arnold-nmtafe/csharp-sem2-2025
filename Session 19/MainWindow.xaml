@@ -1,0 +1,15 @@
+﻿<Window x:Class="Session_19.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Session_19"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="pathBox" HorizontalAlignment="Left" Margin="198,189,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="223"/>
+        <Button Content="Browse" HorizontalAlignment="Left" Margin="426,189,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Open" HorizontalAlignment="Left" Margin="198,217,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>
